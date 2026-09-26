@@ -145,6 +145,23 @@ background: #0b0d10 url("bg") center center / cover no-repeat fixed;  color: #c8
     <div id="wrap">
       <div id="state"></div>
       <div id="out"></div>
+      <script>
+window.applicationCache.ondownloading = function() {
+    alert("جاري تحميل ملفات الأوفلاين (Caching)...");
+};
+
+window.applicationCache.onnoupdate = function() {
+    alert("الكاش مثبت ومحدث من قبل ✔");
+};
+
+window.applicationCache.oncached = function() {
+    alert("Cache Installed Successfully ✔");
+};
+
+window.applicationCache.updateready = function() {
+    alert("تم تحديث الكاش بنجاح ✔");
+};
+</script>
     </div>
     <script type="module">
       import "./jb.js?v=10";
